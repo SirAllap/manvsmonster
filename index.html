@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <title>Man vs Monster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="background1">
-
         <div class="background2">
 
-    <h1>Man vs Monster</h1>
-        <h2>Turn Based Game</h2>
-        <br>
-        <input type="text" readonly id="hit">
-        <input type="text" readonly id="playerLife">
-        <input type="text" readonly id="randomDrop">
+            <h1>Man vs Monster</h1>
+            <h2>Turn Based Game</h2>
 
-        <div class="boton">
-            <button onclick="attack()">Attack</button>
-            <button onclick="resetGame()" id="resetButton">Reset</button>
+            <section class='messagesContainer'>
+                <p id='monster'>Monster</p>
+                <div id='playerInfo'>
+                    <p id='player'>Player</p>
+                    <div id='badges'>
+                        <!-- <span id='healthBadge'><i class="fa-regular fa-heart fa-2xs"></i></span> -->
+                        <span id='boostedAttackBadge'></span>
+                    </div>
+                </div>
+                <p id='drop'></p>
+            </section>
+
+            <div id="buttonSection">
+                <button id="attackButton">Attack <i class="fa-solid fa-broom-ball"></i></button>
+                <button id="nextMonsterButton">Next Monster <i class="fa-regular fa-hand-point-right"></i></button>
+                <button id="resetButton">Reset <i class="fas fa-retweet"></i></button>
+            </div>
+
         </div>
-        
-        
-        </div>
-        
     </div>
-    
 </body>
+
+<script type="module" src="script.js" defer></script>
+<script type="module" src="monster_data.js" defer></script>
+<script src="https://kit.fontawesome.com/b4c41c0996.js" crossorigin="anonymous"></script>
+
 </html>
